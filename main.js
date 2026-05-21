@@ -10,6 +10,7 @@ app.use(cors({
         'http://localhost:3000',
         'https://doctor-appoinment-client-server.vercel.app'
     ],
+    credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
