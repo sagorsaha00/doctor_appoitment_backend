@@ -6,10 +6,13 @@ import router from './src/router/index.js';
 const app = express();
 const PORT = 3001;
 app.use(cors({
-    origin: 'http://localhost:3000, https://doctor-appoinment-client-server.vercel.app',
+    origin: [
+        'http://localhost:3000',
+        'https://doctor-appoinment-client-server.vercel.app'
+    ],
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-}))
+}));
 
 
 app.use(express.json());
