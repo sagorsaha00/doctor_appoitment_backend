@@ -4,7 +4,7 @@ import { createRemoteJWKSet, jwtVerify } from 'jose';
 
 const router = express.Router();
 
-const JWKS = createRemoteJWKSet(new URL('http://localhost:3000/api/auth/jwks'));
+const JWKS = createRemoteJWKSet(new URL('https://doctor-appoinment-client-server.vercel.app/api/auth/jwks'));
 
 async function veryfy(req, res, next) {
     const token = req.headers.authorization;
